@@ -27,12 +27,6 @@
       margin-top: 30px;
     }
   </style>
-  <script>
-    var password = prompt("Enter password to view this page:");
-    if (password !== "saddles2spines!4231") {
-      document.body.innerHTML = "<h2>Access Denied</h2><p>The password you entered is incorrect.</p>";
-    }
-  </script>
 </head>
 <body>
   <h1>Dear Jessica,</h1>
@@ -53,4 +47,18 @@
 
   <p class="signature">Love you always,<br />Jordan</p>
 </body>
+<script>
+  var password = prompt("Enter password to view this page:");
+  var correctPassword = "saddles2spines!4231";
+
+  if (password !== correctPassword) {
+    document.body.innerHTML = `
+      <div style="text-align: center; margin-top: 100px;">
+        <h2>Access Denied</h2>
+        <p>The password you entered is incorrect.</p>
+      </div>
+    `;
+  }
+</script>
+
 </html>
