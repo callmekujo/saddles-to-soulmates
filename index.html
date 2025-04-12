@@ -9,6 +9,7 @@
       background: url('https://m.media-amazon.com/images/I/91CABI5TRyL.jpg') no-repeat center center fixed;
       background-size: cover;
       background-color: lightblue;
+      backdrop-filter: blur(2px);
       max-width: 800px;
       margin: 40px auto;
       padding: 40px 20px;
@@ -32,10 +33,40 @@
 
     p {
     color: #91a3b0; /* Vintage blue — change to #d4a5a5 for soft pink */
+    transition: color 0.3s ease;
+    }
+
+    body.pink-mode p {
+    color: #d4a5a5; /* Vintage pink */
+    }
+
+    .toggle-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: #f4f4f4;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 6px 12px;
+    font-size: 0.9em;
+    cursor: pointer;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .toggle-button:hover {
+    background-color: #eaeaea;
     }
   </style>  
 </head>
 <body>
+  <button class="toggle-button" onclick="toggleTextColor()">Toggle Pink/Blue</button>
+
+  <script>
+    function toggleTextColor() {
+      document.body.classList.toggle('pink-mode');
+    }
+  </script>
+  
   <script>
     var password = prompt("Enter password to view this page:");
     var correctPassword = "saddles2spines!4231";
