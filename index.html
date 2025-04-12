@@ -4,12 +4,6 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>A Letter to My Sister</title>
-  <script>
-    var password = prompt("Enter password to view this page:");
-    if (password !== "saddles2spines!4231") {
-      document.write("<h2 style='text-align:center; margin-top:100px;'>Access Denied</h2><p style='text-align:center;'>The password you entered is incorrect.</p>");
-    }
-  </script>
   <style>
     body {
       font-family: Georgia, serif;
@@ -35,22 +29,36 @@
   </style>
 </head>
 <body>
-  <h1>Dear Jessica,</h1>
+  <script>
+    var password = prompt("Enter password to view this page:");
+    var correctPassword = "saddles2spines!4231";
+    if (password !== correctPassword) {
+      document.write("<h2 style='text-align:center; margin-top:100px;'>Access Denied</h2><p style='text-align:center;'>The password you entered is incorrect.</p>");
+    }
+  </script>
+  <div id="content" style="display: none;">
+    <h1>Dear Jessica,</h1>
 
-  <p>Well, here we are. You’re getting <em>married</em>. The same girl who once did cheer routines in the living room, smelled like horses for an entire phase of your life, and spent seven years chasing an education with grit, focus, and so much heart. Every chapter of your story has led to this moment, and it’s been amazing to watch you grow into the woman you are today.</p>
+    <p>Well, here we are. You’re getting <em>married</em>. The same girl who once did cheer routines in the living room, smelled like horses for an entire phase of your life, and spent seven years chasing an education with grit, focus, and so much heart. Every chapter of your story has led to this moment, and it’s been amazing to watch you grow into the woman you are today.</p>
 
-  <p>You went from riding horses to flipping stunts to adjusting spines, and now you’re officially Dr. Jess. You’ve always had this unstoppable drive, whether you were zipping around in that tiny Mini Cooper like it was a race car or chasing dreams bigger than most people could imagine. And of course, Harper has been loyally trotting along through it all, convinced she’s the star of the show.</p>
+    <p>You went from riding horses to flipping stunts to adjusting spines, and now you’re officially Dr. Jess. You’ve always had this unstoppable drive, whether you were zipping around in that tiny Mini Cooper like it was a race car or chasing dreams bigger than most people could imagine. And of course, Harper has been loyally trotting along through it all, convinced she’s the star of the show.</p>
 
-  <p>There was a time when we were inseparable — childhood adventures, inside jokes, and a bond that didn’t need constant time together to feel strong. As we got older, life started pulling us in different directions. We’ve both been building our own worlds; new relationships, careers, responsibilities. It’s been a little more quiet between us, and yeah, I’ve felt that. But even with the distance, I’ve always kept cheering you on from afar.</p>
+    <p>There was a time when we were inseparable — childhood adventures, inside jokes, and a bond that didn’t need constant time together to feel strong. As we got older, life started pulling us in different directions. We’ve both been building our own worlds; new relationships, careers, responsibilities. It’s been a little more quiet between us, and yeah, I’ve felt that. But even with the distance, I’ve always kept cheering you on from afar.</p>
 
-  <p>Ashley and I have been lucky to witness your milestones; graduations, celebrations, and the moments in between that truly show who you are. From student to doctor to business owner, you’ve built something incredible with your own two hands. And we’ve both watched you grow into a strong, passionate, fiercely capable woman. It’s been incredible to see you rise, even from the sidelines.</p>
+    <p>Ashley and I have been lucky to witness your milestones; graduations, celebrations, and the moments in between that truly show who you are. From student to doctor to business owner, you’ve built something incredible with your own two hands. And we’ve both watched you grow into a strong, passionate, fiercely capable woman. It’s been incredible to see you rise, even from the sidelines.</p>
 
-  <p>And now… there’s James. The Southern gentleman with charm, grace, and just enough patience to keep up with you. He’s the perfect match — someone who brings out your best and stands beside you with calm confidence. The kind of man who feels like home, even to those of us who just met him with a “firm handshake and ma’am-level manners.” He’s earned our respect — and your love.</p>
+    <p>And now… there’s James. The Southern gentleman with charm, grace, and just enough patience to keep up with you. He’s the perfect match — someone who brings out your best and stands beside you with calm confidence. The kind of man who feels like home, even to those of us who just met him with a “firm handshake and ma’am-level manners.” He’s earned our respect — and your love.</p>
 
-  <p>So as you've walked down the aisle, just know that even if we don’t talk every day or live in the same chapter of life anymore, I’ve always been in your corner — proud of you, rooting for you, and grateful to call you my sister. I’m excited for who you are, what you’ve built, and what’s still ahead.</p>
+    <p>So as you've walked down the aisle, just know that even if we don’t talk every day or live in the same chapter of life anymore, I’ve always been in your corner — proud of you, rooting for you, and grateful to call you my sister. I’m excited for who you are, what you’ve built, and what’s still ahead.</p>
 
-  <p>Marriage is the next wild ride, and lucky for you, you’ve got the right partner and the right heart to make it one hell of an adventure.</p>
+    <p>Marriage is the next wild ride, and lucky for you, you’ve got the right partner and the right heart to make it one hell of an adventure.</p>
 
-  <p class="signature">Love you always,<br />Jordan</p>
+    <p class="signature">Love you always,<br />Jordan</p>
+  </div>
+  <script>
+    if (password === correctPassword) {
+      document.getElementById("content").style.display = "block";
+    }
+  </script>
 </body>
 </html>
