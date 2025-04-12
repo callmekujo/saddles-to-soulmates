@@ -36,7 +36,7 @@
       document.write("<h2 style='text-align:center; margin-top:100px;'>Access Denied</h2><p style='text-align:center;'>The password you entered is incorrect.</p>");
     }
   </script>
-  <div id="content" style="display: none;"></div>
+  <div id="content" style="display: none;">
     <h1>Dear Jessica,</h1>
 
     <p>Well, here we are. You’re getting <em>married</em>. The same girl who once did cheer routines in the living room, smelled like horses for an entire phase of your life, and spent seven years chasing an education with grit, focus, and so much heart. Every chapter of your story has led to this moment, and it’s been amazing to watch you grow into the woman you are today.</p>
@@ -54,10 +54,11 @@
     <p>Marriage is the next wild ride, and lucky for you, you’ve got the right partner and the right heart to make it one hell of an adventure.</p>
 
     <p class="signature">Love you always,<br />Jordan</p>
-    <script>
-      if (password === correctPassword) {
-        document.getElementById("content").style.display = "block";
-      }
-    </script>
+  </div>
+  <script>
+    if (password === correctPassword) {
+      document.getElementById("content").style.display = "block";
+    }
+  </script>
 </body>
 </html>
