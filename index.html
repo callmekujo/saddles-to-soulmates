@@ -27,6 +27,12 @@
       margin-top: 30px;
     }
   </style>
+  <script>
+    var password = prompt("Enter password to view this page:");
+    if (password !== "saddles2spines!4231") {
+      document.body.innerHTML = "<h2>Access Denied</h2><p>The password you entered is incorrect.</p>";
+    }
+  </script>
 </head>
 <body>
   <h1>Dear Jessica,</h1>
